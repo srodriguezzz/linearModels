@@ -1,0 +1,40 @@
+---
+title: "linear model"
+author: "Sylvia Rodriguez"
+date: "11/23/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## read in data
+
+```{r}
+MODL1 <- lm(SIMS~ .-ARM,data=data)
+summary.lm(MODL1)
+```
+
+This first model is showing the coefficients of data type ARM. 
+
+```{r}
+MODL2 <- lm(SIMS~ .-GRIP,data=data)
+summary.lm(MODL2)
+```
+
+This model of GRIP is not far off from the ARM data. The coefficients are pretty similar. 
+
+
+```{r}
+MODL3 <- lm(SIMS~ .- ARM+GRIP,data=data)
+summary.lm(MODL3)
+```
+
+
+```{r}
+anova(MODL1,MODL3)
+```
+
+This anova set is showing the comparison of Model 1 and Model 3. The p value is <2.2e-16. This is a very small number so we reject the hypothesis 
