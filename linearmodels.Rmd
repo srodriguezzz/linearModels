@@ -24,7 +24,6 @@ MODL2 <- lm(SIMS~ .-GRIP,data=data)
 summary.lm(MODL2)
 ```
 
-This model of GRIP is not far off from the ARM data. The coefficients are pretty similar. 
 
 
 ```{r}
