@@ -17,7 +17,7 @@ MODL1 <- lm(SIMS~ .-ARM,data=data)
 summary.lm(MODL1)
 ```
 
-This first model is showing the coefficients of data type ARM. 
+
 
 ```{r}
 MODL2 <- lm(SIMS~ .-GRIP,data=data)
