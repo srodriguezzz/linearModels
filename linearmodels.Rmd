@@ -17,7 +17,7 @@ MODL1 <- lm(SIMS~ .-ARM,data=data)
 summary.lm(MODL1)
 ```
 
-
+This first chart shows the coefficients and residuals of the SIMS ~ ARMS
 
 ```{r}
 MODL2 <- lm(SIMS~ .-GRIP,data=data)
